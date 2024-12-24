@@ -2,10 +2,13 @@
   "name": "mothers-day-website",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://sam-siavoshian.github.io/Bakhshi",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+      "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-three/drei": "^9.42.0",
