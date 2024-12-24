@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bakhshi/static/css/main.bb36ed18.css",
+    "main.js": "/Bakhshi/static/js/main.15c69959.js",
+    "index.html": "/Bakhshi/index.html",
+    "main.bb36ed18.css.map": "/Bakhshi/static/css/main.bb36ed18.css.map",
+    "main.15c69959.js.map": "/Bakhshi/static/js/main.15c69959.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb36ed18.css",
+    "static/js/main.15c69959.js"
+  ]
+}
