@@ -1,0 +1,107 @@
+/* src/components/GallerySection.css */
+
+.gallery-section {
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffe6f0 100%); /* Soft gradient background */
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  position: relative;
+  /* background-image: url('/assets/images/background-pattern.png'); */ /* Removed */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.media-item {
+  position: absolute; /* Stack media items in the same place */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.media-item.active {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.media-item img,
+.media-item video {
+  width: 340px;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-item video {
+  max-height: 450px; /* Adjust as needed to maintain aspect ratio */
+  object-fit: cover; /* Ensures the video covers the container without distortion */
+  width: 330px;
+}
+/* Modal Styles */
+.media-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.media-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff69b4;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.modal-close-button:hover {
+  background: #ff85c1;
+}
+
+/* Responsive styling */
+@media (min-width: 768px) {
+  .gallery-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .media-item {
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+.gallery-video{
+  width: 300px;
+}

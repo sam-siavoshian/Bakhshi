@@ -1,0 +1,64 @@
+/* src/components/FinalSection.css */
+
+.final-section {
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffe6f0 100%); /* Soft gradient background */
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  animation: fadeInFinal 2s ease-in;
+}
+
+.final-section h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #13131c;
+}
+
+.final-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #13131c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.final-video-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.final-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInFinal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive styling */
+@media (min-width: 768px) {
+  .final-section h2 {
+    font-size: 3rem;
+  }
+
+  .final-section p {
+    font-size: 1.5rem;
+  }
+
+
+  .final-video {
+    max-height: 600px;
+  }
+}

@@ -1,0 +1,69 @@
+.kish-island-section {
+    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 100%);
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  
+  .kish-title {
+    font-size: 2rem;
+    color: #ff69b4;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .kish-item {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0; /* Hidden by default for animations */
+  }
+  
+  .kish-media-container {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .kish-image,
+  .kish-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  .kish-overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 105, 180, 0.85);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  @media (min-width: 768px) {
+    .kish-title {
+      font-size: 2.5rem;
+    }
+  
+    .kish-overlay-text {
+      font-size: 1.2rem;
+      padding: 15px 20px;
+    }
+  }
+  

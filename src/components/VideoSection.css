@@ -1,0 +1,158 @@
+/* src/components/TimelineSection.css */
+
+.timeline-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffe6f0 100%); /* Soft gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  position: relative;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  position: relative;
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+  opacity: 0; /* Start hidden for GSAP animation */
+}
+
+.timeline-event.active {
+  opacity: 1;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff69b4; /* Hot pink */
+  border-radius: 50%;
+}
+
+.event-content {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: #ff69b4; /* Hot pink */
+  margin-bottom: 5px;
+}
+
+.event-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.event-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-video {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 40px 10px;
+  }
+
+  .timeline-container {
+    max-width: 100%;
+  }
+
+  .timeline-event {
+    margin-bottom: 30px;
+  }
+
+  .event-content {
+    padding: 10px;
+  }
+
+  .event-date {
+    font-size: 0.8rem;
+  }
+
+  .event-title {
+    font-size: 1rem;
+  }
+
+  .event-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth transitions and hover effects */
+.timeline-event:hover .event-content {
+  transform: translateX(5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* src/components/VideoSection.css */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Take full viewport height on all devices */
+  overflow: hidden; /* Hide any potential overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Mobile-first approach:
+  The video is set to be 100% width, auto height, so it scales well on small screens. 
+*/
+
+.full-screen-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;  /* Ensures the video covers the width with correct aspect ratio */
+}
+
+/* If you need adjustments for larger screens, add media queries after the default rules */
+@media (min-width: 768px) {
+  .full-screen-video {
+    /* For tablets and larger, you can fine-tune further if desired */
+    height: 100vh;  
+    object-fit: cover;
+  }
+}

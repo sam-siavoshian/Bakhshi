@@ -1,0 +1,30 @@
+/* src/App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root, .App {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gallery-section, .timeline-section, .final-section {
+  height: auto; /* Allow content to determine height */
+  min-height: 100vh; /* Ensure each section takes at least full viewport height */
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
